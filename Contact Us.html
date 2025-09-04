@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Essence Boutique</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="About.html">About</a></li>
+                <li><a href="Our Work.html">Our Work</a></li>
+                <li><a href="Contact.html">Contact</a></li>
+                <li><a href="Products.html">Products</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Contact Us</h1>
+        <p>Wed love to hear from you! Reach out to us through the following channels:</p>
+        <ul>
+            <li><strong>Email:</strong> <a href="support@essenceboutique.com">support@essenceboutique.com</a></li>
+            <li><strong>Customer Care Line:</strong> (+27) 65 874 5263</li>
+        </ul>
+        <p>Our customer care team is available Monday to Friday, 9:00 AM to 6:00 PM.</p>
+        <input type="button" value="Log a Ticket" onclick="showForm()">
+
+        <!-- Hidden form for logging a ticket -->
+        <div id="ticketForm" style="display: none; margin-top: 20px;">
+            <h2>Log a Ticket</h2>
+            <form>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+                <label for="issue">Issue:</label><br>
+                <textarea id="issue" name="issue" placeholder="Describe your issue" rows="4" required></textarea><br><br>
+
+                <input type="submit" value="Submit Ticket">
+            </form>
+        </div>
+
+        <script>
+            function showForm() {
+                document.getElementById('ticketForm').style.display = 'block';
+            }
+        </script>
+    </main>
+    <footer>
+        <p>&copy; 2023 Essence Boutique. All rights reserved.</p>
+    </footer>
+</body>
+</html>  
+</body>
+</html>

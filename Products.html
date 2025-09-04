@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products</title>
+</head>
+<header>
+    <nav>
+        <ul>
+            <li><a href="Index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Our Work.html">Our Work</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="Products.html">Products</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+<!----Main--> 
+<main>
+    <main>
+        <h1>Our Products</h1>
+        <p>Explore our wide range of High quality products, carefully curated to suit your style and needs. Check back often as we regularly update our collection!</p>
+        
+        <section>
+            <h2>Featured Categories</h2>
+            <ul>
+                <li onclick="toggleSubcategories(this)">Clothing
+                    <ul style="display: none;">
+                        <li>Men's Wear</li>
+                        <li>Women's Wear</li>
+                        <li>Kids' Wear</li>
+                    </ul>
+                </li>
+                <li onclick="toggleSubcategories(this)">Accessories
+                    <ul style="display: none;">
+                        <li>Jewelry</li>
+                        <li>Handbags</li>
+                        <li>Watches</li>
+                    </ul>
+                </li>
+                <li onclick="toggleSubcategories(this)">Home Decor
+                    <ul style="display: none;">
+                        <li>Wall Art</li>
+                        <li>Furniture</li>
+                        <li>Lighting</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <script>
+                function toggleSubcategories(category) {
+                    const subcategories = category.querySelector('ul');
+                    if (subcategories.style.display === 'none') {
+                        subcategories.style.display = 'block';
+                    } else {
+                        subcategories.style.display = 'none';
+                    }
+                }
+            </script>
+    </main>
+</main>   
+</body>
+</html>
