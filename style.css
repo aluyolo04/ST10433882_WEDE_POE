@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Styles */
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1rem; /* scalable */
+    line-height: 1.6;
+    background-color: #fafafa;
+    color: #be5656;
+}
+
+/* Header */
+header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header img {
+    max-height: 60px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex; /* flexbox */
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+/* Hover effects */
+nav a:hover {
+    background: #555;
+}
+
+/* Main Content */
+main {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* two-column layout */
+    gap: 2rem;
+}
+
+section {
+    background: white;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* Responsive Styling */
+@media (max-width: 1024px) {
+    main {
+        grid-template-columns: 1fr; /* switch to single column */
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
