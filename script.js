@@ -156,10 +156,8 @@ function submitTicket(e) {
     name, email, type, issue, created: new Date().toISOString()
   };
 
-  // Save locally (fallback)
   saveToLocal('essence_tickets', ticket);
 
-  // Compose mailto so user can send mail
   const recipient = 'support@essenceboutique.com';
   const subject = `Ticket: ${type} - ${name}`;
   const body = `Name: ${name}\nEmail: ${email}\nType: ${type}\n\nIssue:\n${issue}\n\n---\nThis ticket was saved locally in the browser as a fallback.`;
@@ -191,20 +189,18 @@ function submitEnquiry(e) {
   const record = { id: Date.now(), name, email, phone, product, message, created: new Date().toISOString() };
   saveToLocal('essence_enquiries', record);
 
-  // Try to open mail client with contents
   const recipient = 'support@essenceboutique.com';
   const subject = `Product Enquiry: ${product} - ${name}`;
   const body = `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nProduct: ${product}\n\nMessage:\n${message}\n\n---\nSaved locally in browser.`;
-  // open mail client (this will not auto-send, user must send)
+ 
   window.location.href = encodeMailto(recipient, subject, body);
 
   form.reset();
   if (statusEl) statusEl.textContent = 'Enquiry prepared in your email client and saved locally as a backup.';
 }
 
-/* utility to gracefully handle forms with no backend */
 function simulateAjaxSubmit(payload, onSuccess, onError) {
-  // there's no backend in this static assignment. We'll simulate delay then call success.
+    
   setTimeout(() => {
     if (typeof onSuccess === 'function') onSuccess();
   }, 500);
