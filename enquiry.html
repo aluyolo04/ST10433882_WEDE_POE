@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Product Enquiry | Contemporary Boutique</title>
+
+  <meta name="description" content="Make an enquiry about our contemporary decorative items. Ask about availability, pricing, custom designs, or product details — we’re here to assist.">
+  <meta name="keywords" content="product enquiry, décor pricing, availability check, boutique enquiries, modern decorative items enquiry">
+  <link rel="canonical" href="https://www.essenceboutique.com/enquiry.html">
+
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <nav class="nav-bar">
+      <a href="index.html" class="logo"><img src="images/Essence_logo.png" alt="Essence Boutique Logo" /></a>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Our work.html">Our Work</a></li>
+        <li><a href="Contact Us.html">Contact</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="enquiry.html">Enquiries</a></li>
+
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMobileNav()">☰</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Product Enquiries</h1>
+    <p>Use this form to enquire about product availability, pricing, or custom designs.</p>
+
+    <form id="enquiryForm" onsubmit="submitEnquiry(event)" novalidate>
+      <label for="e-name">Full name</label>
+      <input id="e-name" name="name" required minlength="2" />
+
+      <label for="e-email">Email</label>
+      <input id="e-email" name="email" type="email" required />
+
+      <label for="e-phone">Phone (optional)</label>
+      <input id="e-phone" name="phone" type="tel" pattern="[0-9+\-\s()]*" />
+
+      <label for="e-product">Product (name/ID)</label>
+      <input id="e-product" name="product" required />
+
+      <label for="e-message">Message</label>
+      <textarea id="e-message" name="message" rows="5" required minlength="10"></textarea>
+
+      <button type="submit" class="btn">Submit Enquiry</button>
+      <p id="enquiryMsg" class="muted" aria-live="polite"></p>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Essence Boutique. All rights reserved.</p>
+  </footer>
+</body>
+</html>

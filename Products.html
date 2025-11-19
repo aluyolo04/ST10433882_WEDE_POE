@@ -4,10 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Products - Essence Boutique</title>
+
+  <meta name="description" content="Browse featured contemporary decorative products — vases, lamps, chairs and more.">
+  <meta name="keywords" content="decorative products, vases, lamps, chairs, modern furniture, boutique products">
+  <link rel="canonical" href="https://www.example.com/products.html">
+
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
-<script src="script.js"></script>
 <body>
   <header>
     <nav class="nav-bar">
@@ -15,9 +19,11 @@
       <ul class="nav-list">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="Our Work.html">Our Work</a></li>
+        <li><a href="Our work.html">Our Work</a></li>
         <li><a href="Contact Us.html">Contact</a></li>
         <li><a href="products.html" class="active">Products</a></li>
+        <li><a href="enquiry.html">Enquiries</a></li>
+
       </ul>
       <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMobileNav()">☰</button>
     </nav>
@@ -27,8 +33,8 @@
     <h1>Featured Products</h1>
 
     <div class="product-controls">
-      <input id="search" type="search" placeholder="Search products..." oninput="filterProducts()" />
-      <select id="sort" onchange="sortProducts()">
+      <input id="search" type="search" placeholder="Search products..." />
+      <select id="sort">
         <option value="default">Sort</option>
         <option value="price-asc">Price: Low → High</option>
         <option value="price-desc">Price: High → Low</option>
@@ -38,33 +44,34 @@
 
     <div id="product-grid" class="product-grid">
       <div class="product" data-name="Elegant Vase" data-price="450.00">
-        <img src="images/products/vase.jpg" alt="Elegant Vase" onclick="openLightbox(this.src)" />
+        <img src="Images/Elegant Vase.webp" alt="Elegant white ceramic vase" loading="lazy" width="400" height="280" onclick="openLightbox(this.src)" />
         <h3>Elegant Vase</h3>
         <p class="price">R450.00</p>
       </div>
 
       <div class="product" data-name="Stylish Lamp" data-price="750.00">
-        <img src="images/products/lamp.jpg" alt="Stylish Lamp" onclick="openLightbox(this.src)" />
+        <img src="Images/Stylish lamp.png" alt="Modern table lamp with wooden base" loading="lazy" width="400" height="280" onclick="openLightbox(this.src)" />
         <h3>Stylish Lamp</h3>
         <p class="price">R750.00</p>
       </div>
 
       <div class="product" data-name="Modern Chair" data-price="1200.00">
-        <img src="images/products/chair.jpg" alt="Modern Chair" onclick="openLightbox(this.src)" />
+        <img src="Images/Modern Chair.jpg" alt="Contemporary lounge chair" loading="lazy" width="400" height="280" onclick="openLightbox(this.src)" />
         <h3>Modern Chair</h3>
         <p class="price">R1200.00</p>
       </div>
 
       <div class="product" data-name="Decorative Mirror" data-price="600.00">
-        <img src="images/products/mirror.jpg" alt="Decorative Mirror" onclick="openLightbox(this.src)" />
+        <img src="Images/Decorative Mirror.webp" alt="Round decorative wall mirror" loading="lazy" width="400" height="280" onclick="openLightbox(this.src)" />
         <h3>Decorative Mirror</h3>
-        <p class="price">R600.00
+        <p class="price">R600.00</p>
+      </div>
     </div>
   </main>
 
   <!-- Lightbox -->
-  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
-    <span class="lightbox-close" onclick="closeLightbox(); event.stopPropagation()">&times;</span>
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close" onclick="closeLightbox()">&times;</button>
     <img id="lightbox-img" alt="Enlarged product image" />
   </div>
 

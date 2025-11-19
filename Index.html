@@ -3,11 +3,20 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Essence Boutique - Home</title>
+  <title>Contemporary Boutique | Modern Decorative Items</title>
+
+  <meta name="description" content="Discover unique contemporary decorative items crafted to elevate your living space. Explore modern décor, handcrafted pieces, and stylish accessories at our boutique.">
+  <meta name="keywords" content="contemporary décor, modern decorative items, home décor boutique, stylish home accessories, modern design pieces, lifestyle boutique">
+  <link rel="canonical" href="https://www.essenceboutique.com/index.html">
+
+  <meta property="og:title" content="Contemporary Boutique | Modern Decorative Items">
+  <meta property="og:description" content="Discover unique contemporary decorative items to elevate your living space.">
+  <meta property="og:image" content="https://www.essenceboutique.com/images/Essence_logo.png">
+  <meta property="og:type" content="website">
+
   <link rel="stylesheet" href="style.css" />
   <script defer src="script.js"></script>
 </head>
-<script src="script.js"></script>
 <body>
   <header>
     <nav class="nav-bar">
@@ -18,24 +27,30 @@
       <ul class="nav-list">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="Our Work.html">Our Work</a></li>
+        <li><a href="Our work.html">Our Work</a></li>
         <li><a href="Contact Us.html">Contact</a></li>
         <li><a href="products.html">Products</a></li>
+        <li><a href="enquiry.html">Enquiries</a></li>
+
       </ul>
-      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMobileNav()">☰</button>
+
+      <div style="display:flex;gap:8px;align-items:center">
+        <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMobileNav()">☰</button>
+        <button id="openInfoBtn" class="btn" aria-haspopup="dialog">Info</button>
+      </div>
     </nav>
   </header>
 
   <main>
     <section class="hero">
       <div class="hero-content">
-        <h1>Welcome to Essence Boutique</h1>
+        <h1>Modern Contemporary Decorative Items</h1>
         <p>Curated style, timeless pieces, and quality you can trust.</p>
         <a class="btn" href="products.html">Shop Now</a>
       </div>
     </section>
 
-    <section class="info-cards">
+    <section class="info-cards container">
       <article>
         <h2>Exclusive Collections</h2>
         <p>Handpicked pieces that reflect your personality and style.</p>
@@ -50,6 +65,14 @@
       </article>
     </section>
   </main>
+
+  <div id="infoModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="infoTitle" tabindex="-1">
+    <div class="modal-content">
+      <button class="close" aria-label="Close modal" data-close>&times;</button>
+      <h2 id="infoTitle">Essence Contact</h2>
+      <p>Contact our team about any of your queries.</p>
+    </div>
+  </div>
 
   <footer>
     <p>&copy; 2024 Essence Boutique. All rights reserved.</p>

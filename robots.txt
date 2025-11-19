@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://github.com/aluyolo04/ST10433882_WEDE_POE.git
