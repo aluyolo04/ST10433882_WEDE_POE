@@ -1,51 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About - Essence Boutique</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About - Essence Boutique</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
+<script src="script.js"></script>
 <body>
-    <header>
-        <nav>
-            <a href="Index.html" class="logo">
-                <img src="images/Essence_logo.png" alt="Essence Boutique Logo">
-            </a>
-            <ul>
-                <li><a href="Index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Our Work.html">Our Work</a></li>
-                <li><a href="Contact Us.html">Contact</a></li>
-                <li><a href="Products.html">Products</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+  <header>
+    <nav class="nav-bar">
+      <a href="index.html" class="logo"><img src="images/Essence_logo.png" alt="Essence Boutique Logo" /></a>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="Our work.html">Our Work</a></li>
+        <li><a href="Contact Us.html">Contact</a></li>
+        <li><a href="products.html">Products</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMobileNav()">☰</button>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-            <p>Essence Boutique is a premier retail store dedicated to offering a curated selection of unique, stylish, and high-quality products. Our mission is to provide our customers with an exceptional shopping experience, combining elegance, affordability, and personalized service.</p>
-        </section>
+  <main class="container">
+    <h1>About Essence Boutique</h1>
 
-        <section>
-            <h2>Our Vision and Future</h2>
-            <p>We aim to be the go-to destination for individuals seeking exclusive and trendy items that reflect their personality and style. At Essence Boutique, we believe in empowering our customers to express themselves through our carefully chosen collections.</p>
-        </section>
+    <section>
+      <p>Essence Boutique is a premier retail store dedicated to offering a curated selection of unique, stylish, and high-quality products. Our mission is to provide our customers with an exceptional shopping experience, combining elegance, affordability, and personalized service.</p>
+    </section>
 
-        <section>
-            <h2>Our Values</h2>
-            <ul>
-                <li><strong>Quality:</strong> We prioritize excellence in every product we offer.</li>
-                <li><strong>Customer Satisfaction:</strong> Your happiness is our top priority.</li>
-                <li><strong>Innovation:</strong> We constantly update our collections to stay ahead of trends.</li>
-                <li><strong>Sustainability:</strong> We are committed to eco-friendly practices and supporting ethical brands.</li>
-            </ul>
-        </section>
-    </main>
+    <section>
+      <h2>Our Vision and Future</h2>
+      <p>We aim to be the go-to destination for individuals seeking exclusive and trendy items that reflect their personality and style. At Essence Boutique, we believe in empowering our customers to express themselves through our carefully chosen collections.</p>
+    </section>
 
-    <footer>
-        <p>&copy; 2024 Essence Boutique. All rights reserved.</p>
-    </footer>
+    <section>
+      <h2>Our Values</h2>
+      <ul>
+        <li><strong>Quality:</strong> We prioritize excellence in every product we offer.</li>
+        <li><strong>Customer Satisfaction:</strong> Your happiness is our top priority.</li>
+        <li><strong>Innovation:</strong> We constantly update our collections to stay ahead of trends.</li>
+        <li><strong>Sustainability:</strong> We are committed to eco-friendly practices and supporting ethical brands.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Essence Boutique. All rights reserved.</p>
+  </footer>
 </body>
 </html>

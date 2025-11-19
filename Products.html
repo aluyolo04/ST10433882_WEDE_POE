@@ -1,73 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Products - Essence Boutique</title>
-    <link rel="stylesheet" href="style.css">
-    <script>
-        function toggleSubcategories(category) {
-            const subcategories = category.querySelector('ul');
-            if (subcategories.style.display === 'none' || subcategories.style.display === '') {
-                subcategories.style.display = 'block';
-            } else {
-                subcategories.style.display = 'none';
-            }
-        }
-    </script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Products - Essence Boutique</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
+<script src="script.js"></script>
 <body>
-    <header>
-        <nav>
-            <a href="Index.html" class="logo">
-                <img src="images/Essence_logo.png" alt="Essence Boutique Logo">
-            </a>
-            <ul>
-                <li><a href="Index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Our Work.html">Our Work</a></li>
-                <li><a href="Contact Us.html">Contact</a></li>
-                <li><a href="Products.html">Products</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+  <header>
+    <nav class="nav-bar">
+      <a href="index.html" class="logo"><img src="images/Essence_logo.png" alt="Essence Boutique Logo" /></a>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Our Work.html">Our Work</a></li>
+        <li><a href="Contact Us.html">Contact</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMobileNav()">☰</button>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-            <p>Explore our wide range of high-quality products, carefully curated to suit your style and needs. Check back often as we regularly update our collection!</p>
-        </section>
+  <main class="container">
+    <h1>Featured Products</h1>
 
-        <section>
-            <h2>Featured Categories</h2>
-            <ul>
-                <li onclick="toggleSubcategories(this)">Clothing
-                    <ul style="display: none;">
-                        <li>Men's Wear</li>
-                        <li>Women's Wear</li>
-                        <li>Kids' Wear</li>
-                    </ul>
-                </li>
-                <li onclick="toggleSubcategories(this)">Accessories
-                    <ul style="display: none;">
-                        <li>Jewelry</li>
-                        <li>Handbags</li>
-                        <li>Watches</li>
-                    </ul>
-                </li>
-                <li onclick="toggleSubcategories(this)">Home Decor
-                    <ul style="display: none;">
-                        <li>Wall Art</li>
-                        <li>Furniture</li>
-                        <li>Lighting</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-    </main>
+    <div class="product-controls">
+      <input id="search" type="search" placeholder="Search products..." oninput="filterProducts()" />
+      <select id="sort" onchange="sortProducts()">
+        <option value="default">Sort</option>
+        <option value="price-asc">Price: Low → High</option>
+        <option value="price-desc">Price: High → Low</option>
+        <option value="name-asc">Name: A → Z</option>
+      </select>
+    </div>
 
-    <footer>
-        <p>&copy; 2024 Essence Boutique. All rights reserved.</p>
-    </footer>
+    <div id="product-grid" class="product-grid">
+      <div class="product" data-name="Elegant Vase" data-price="450.00">
+        <img src="images/products/vase.jpg" alt="Elegant Vase" onclick="openLightbox(this.src)" />
+        <h3>Elegant Vase</h3>
+        <p class="price">R450.00</p>
+      </div>
+
+      <div class="product" data-name="Stylish Lamp" data-price="750.00">
+        <img src="images/products/lamp.jpg" alt="Stylish Lamp" onclick="openLightbox(this.src)" />
+        <h3>Stylish Lamp</h3>
+        <p class="price">R750.00</p>
+      </div>
+
+      <div class="product" data-name="Modern Chair" data-price="1200.00">
+        <img src="images/products/chair.jpg" alt="Modern Chair" onclick="openLightbox(this.src)" />
+        <h3>Modern Chair</h3>
+        <p class="price">R1200.00</p>
+      </div>
+
+      <div class="product" data-name="Decorative Mirror" data-price="600.00">
+        <img src="images/products/mirror.jpg" alt="Decorative Mirror" onclick="openLightbox(this.src)" />
+        <h3>Decorative Mirror</h3>
+        <p class="price">R600.00
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox(); event.stopPropagation()">&times;</span>
+    <img id="lightbox-img" alt="Enlarged product image" />
+  </div>
+
+  <footer>
+    <p>&copy; 2024 Essence Boutique. All rights reserved.</p>
+  </footer>
 </body>
 </html>

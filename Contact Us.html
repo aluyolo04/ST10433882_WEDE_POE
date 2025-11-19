@@ -1,57 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us - Essence Boutique</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact - Essence Boutique</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
+<script src="script.js"></script>
 <body>
-    <header>
-        <nav>
-            <a href="Index.html" class="logo">
-                <img src="images/Essence_logo.png" alt="Essence Boutique Logo">
-            </a>
-            <ul>
-                <li><a href="Index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Our Work.html">Our Work</a></li>
-                <li><a href="Contact Us.html">Contact</a></li>
-                <li><a href="Products.html">Products</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+  <header>
+    <nav class="nav-bar">
+      <a href="index.html" class="logo"><img src="images/Essence_logo.png" alt="Essence Boutique Logo" /></a>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Our Work.html">Our Work</a></li>
+        <li><a href="Contact Us.html" class="active">Contact</a></li>
+        <li><a href="products.html">Products</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMobileNav()">☰</button>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-            <p>We’d love to hear from you! Reach out to us through the following channels:</p>
-            <ul>
-                <li><strong>Email:</strong> <a href="mailto:support@essenceboutique.com">support@essenceboutique.com</a></li>
-                <li><strong>Customer Care Line:</strong> (+27) 65 874 5263</li>
-            </ul>
-            <p>Our customer care team is available Monday to Friday, 9:00 AM to 6:00 PM.</p>
-        </section>
+  <main class="container">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Reach out through one of the channels below.</p>
 
-        <section>
-            <h2>Log a Ticket</h2>
-            <form>
-                <label for="name">Name:</label><br>
-                <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+    <ul class="contact-list">
+      <li><strong>Email:</strong> <a href="mailto:support@essenceboutique.com">support@essenceboutique.com</a></li>
+      <li><strong>Phone:</strong> (+27) 65 874 5263</li>
+      <li><strong>Hours:</strong> Mon–Fri, 09:00–18:00</li>
+    </ul>
 
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+    <button class="btn" onclick="showForm()">Log a Ticket</button>
 
-                <label for="issue">Issue:</label><br>
-                <textarea id="issue" name="issue" placeholder="Describe your issue" rows="4" required></textarea><br><br>
+    <div id="ticketForm" class="ticket-form hidden">
+      <h2>Log a Ticket</h2>
+      <form id="ticket" onsubmit="submitTicket(event)">
+        <label for="t-name">Name</label>
+        <input id="t-name" name="name" required />
+        <label for="t-email">Email</label>
+        <input id="t-email" name="email" type="email" required />
+        <label for="t-issue">Issue</label>
+        <textarea id="t-issue" name="issue" rows="4" required></textarea>
+        <button class="btn" type="submit">Submit</button>
+        <button type="button" class="btn ghost" onclick="hideForm()">Cancel</button>
+      </form>
+      <p id="ticketMsg" class="muted"></p>
+    </div>
+    <section>
+      <h2>Our Location</h2>
+      <div id="map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3309.585034659001!2d25.457561075652286!3d-33.95179952336245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e7ada12201d3ec7%3A0xf96ec58e15a705c3!2sBaywest%20Mall!5e0!3m2!1sen!2sza!4v1763569426857!5m2!1sen!2sza"
+          width="600" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </section>
+  </main>
 
-                <input type="submit" value="Submit Ticket">
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 Essence Boutique. All rights reserved.</p>
-    </footer>
+  <footer>
+    <p>&copy; 2024 Essence Boutique. All rights reserved.</p>
+  </footer>
 </body>
 </html>

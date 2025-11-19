@@ -1,42 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Work - Essence Boutique</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Our Work - Essence Boutique</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
+<script src="script.js"></script>
 <body>
-    <header>
-        <nav>
-            <a href="Index.html" class="logo">
-                <img src="images/Essence_logo.png" alt="Essence Boutique Logo">
-            </a>
-            <ul>
-                <li><a href="Index.html">Home</a></li>
-                <li><a href="About.html">About</a></li>
-                <li><a href="Our Work.html">Our Work</a></li>
-                <li><a href="Contact Us.html">Contact</a></li>
-                <li><a href="Products.html">Products</a></li>
-            </ul>
-        </nav>
-    </header>
-    
+  <header>
+    <nav class="nav-bar">
+      <a href="index.html" class="logo"><img src="images/Essence_logo.png" alt="Essence Boutique Logo" /></a>
+      <ul class="nav-list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="Our Work.html" class="active">Our Work</a></li>
+        <li><a href="Contact Us.html">Contact</a></li>
+        <li><a href="products.html">Products</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation" onclick="toggleMobileNav()">☰</button>
+    </nav>
+  </header>
 
-    <main>
-        <section>
-            <p>At Essence Boutique, we take pride in our commitment to delivering exceptional products and services. Our work revolves around:</p>
-            <ul>
-                <li><strong>Curating Unique Collections:</strong> We handpick every item to ensure it meets our high standards of quality and style.</li>
-                <li><strong>Supporting Local Artisans:</strong> We collaborate with talented artisans to bring you exclusive, handcrafted products.</li>
-                <li><strong>Promoting Sustainability:</strong> We focus on eco-friendly practices and partner with brands that share our values.</li>
-                <li><strong>Enhancing Customer Experience:</strong> We strive to create a seamless and enjoyable shopping experience for every customer.</li>
-            </ul>
-        </section>
-    </main>
+  <main class="container">
+    <h1>Our Work</h1>
 
-    <footer>
-        <p>&copy; 2024 Essence Boutique. All rights reserved.</p>
-    </footer>
+    <section>
+      <p>At Essence Boutique, we take pride in our commitment to delivering exceptional products and services. Our work revolves around:</p>
+      <ul>
+        <li><strong>Curating Unique Collections:</strong> Items selected for quality and style</li>
+        <li><strong>Supporting Local Artisans:</strong> Collaborate with artisans for handcrafted goods</li>
+        <li><strong>Promoting Sustainability:</strong> Eco-friendly practices and suppliers</li>
+        <li><strong>Enhancing Customer Experience:</strong> Seamless shopping and aftercare</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Essence Boutique. All rights reserved.</p>
+  </footer>
 </body>
 </html>
