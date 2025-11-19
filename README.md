@@ -1,11 +1,14 @@
 # ST10433882_WEDE_POE
 
-Essences boutique by Aphiwe Ngcwangu ST10433882
+Author: Aphiwe Ngcwangu
+Student Number: ST10433882
 
-Prroject is a html site that is a beauty boutique thatt sells self care products
-Objectives is to provide convenient shoppping for customers shoping needs.
+Project Overview
 
-Key Features:
-    Contac us - User can enter to log a ticket if they need assistance or write a complaint
+Essence Boutique is a contemporary web-based boutique designed to showcase and sell decorative and lifestyle products.
+The website was developed using HTML, CSS, and JavaScript and aims to provide users with a clean, visually appealing, and functional shopping experience.
+
+The primary objective of the project is to create a convenient online browsing experience where customers can explore products, learn more about the boutique, and get in touch for enquiries or assistance.
+
 
 
